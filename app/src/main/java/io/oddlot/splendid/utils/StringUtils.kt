@@ -92,7 +92,8 @@ fun promptDialog(message: String?, callback: (() -> Unit)?) {
 fun basicEditText(context: Context): EditText {
     val input = EditText(context).apply {
         inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_WORDS
-        showSoftInputOnFocus = true
+        val applicationFont = R.font.varela_round
+//        showSoftInputOnFocus = true
         typeface = ResourcesCompat.getFont(getContext(), applicationFont)
 
         val lp = FrameLayout.LayoutParams(
@@ -100,7 +101,7 @@ fun basicEditText(context: Context): EditText {
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
 
-        lp.setMargins(resources.getDimensionPixelSize(R.dimen.DIALOG_INPUT_MARGIN), 10, resources.getDimensionPixelSize(R.dimen.DIALOG_INPUT_MARGIN), 0)
+        lp.setMargins(resources.getDimensionPixelSize(R.dimen.dialog_input_margin), 10, resources.getDimensionPixelSize(R.dimen.DIALOG_INPUT_MARGIN), 0)
 
         layoutParams = lp
     }
