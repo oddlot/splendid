@@ -2,13 +2,11 @@ package io.oddlot.splendid
 
 import android.app.Application
 import android.content.SharedPreferences
-import androidx.preference.PreferenceManager
 
 //import io.oddlot.splendid.data.AppDatabase
 
 class App : Application() {
 //    lateinit var appDatabase: AppDatabase
-//    lateinit var appPrefs:
 
     companion object {
 //        @Volatile
