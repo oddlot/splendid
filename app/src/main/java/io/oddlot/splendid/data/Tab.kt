@@ -20,9 +20,9 @@ data class Tab (
     @PrimaryKey(autoGenerate = true)
     val id: Int?,
     var name: String,
+    var owner: Member,
     var balance: Double = 0.0,
-    var currency: String = "USD",
-    var contactId: Int?,
+    var currency: String = "USD"
 )
 
 @Dao

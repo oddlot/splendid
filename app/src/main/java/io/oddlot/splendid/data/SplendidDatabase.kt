@@ -7,7 +7,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Database(entities = [Tab::class, Transaction::class, Member::class, Membership::class], version = 1)
 //@TypeConverters(Converters::class)
-abstract class AppDatabase : RoomDatabase() {
+abstract class SplendidDatabase : RoomDatabase() {
     abstract fun tabDao(): TabDao
     abstract fun transactionDao(): TransactionDao
     abstract fun memberDao(): MemberDao

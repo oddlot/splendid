@@ -10,11 +10,10 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
+@Fts4
 @Entity(
     tableName = "Tag",
-    indices = [
-        Index(value = ["value"], unique = true)
-    ]
+    indices = [Index(value = ["value"], unique = true)]
 )
 data class Tag (
     @PrimaryKey(autoGenerate = true)

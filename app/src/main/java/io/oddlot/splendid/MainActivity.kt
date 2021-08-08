@@ -1,6 +1,7 @@
 package io.oddlot.splendid
 
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,5 +32,20 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNav.setupWithNavController(navController)
+
+        bottomNav.setOnItemSelectedListener { item ->
+            val id = item.itemId
+
+            if (id != navController.currentDestination?.id) {
+                when (id) {
+                    R.id.navigation_home -> {}
+                    R.id.navigation_create_new -> {
+                        Toast.makeText(this, "$id", Toast.LENGTH_LONG).show()
+                    }
+                    R.id.navigation_settings -> {}
+                }
+            }
+            true
+        }
     }
 }

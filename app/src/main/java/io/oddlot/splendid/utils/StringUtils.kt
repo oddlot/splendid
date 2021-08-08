@@ -101,7 +101,7 @@ fun basicEditText(context: Context): EditText {
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
 
-        lp.setMargins(resources.getDimensionPixelSize(R.dimen.dialog_input_margin), 10, resources.getDimensionPixelSize(R.dimen.DIALOG_INPUT_MARGIN), 0)
+        lp.setMargins(resources.getDimensionPixelSize(R.dimen.dialog_input_margin), 10, resources.getDimensionPixelSize(R.dimen.dialog_input_margin), 0)
 
         layoutParams = lp
     }

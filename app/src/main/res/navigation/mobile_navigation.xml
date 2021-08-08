@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="io.oddlot.splendid.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_tabFragment"
+            app:destination="@id/tab_details_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,17 @@
         android:name="io.oddlot.splendid.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/tab_details_fragment"
+        android:name="io.oddlot.splendid.ui.tab.TabDetailsFragment"
+        android:label="tab_fragment"
+        tools:layout="@layout/fragment_tab_details">
+
+<!--        <argument-->
+<!--            android:name="Tab"-->
+<!--            app:argType="io.oddlot.splendid.data.Tab"/>-->
+
+    </fragment>
+
 </navigation>

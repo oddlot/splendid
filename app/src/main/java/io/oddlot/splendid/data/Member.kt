@@ -7,15 +7,13 @@ import androidx.room.*
 @Entity(
     tableName = "member"
     ,
-    indices = [
-        Index(value = ["name"], unique = true)
-    ]
+    indices = [Index(value = ["name"], unique = true)]
 )
 data class Member(
     @PrimaryKey(autoGenerate = true)
     val id: Int?,
     var name: String,
-    var contactId: Int?
+    var contactId: Int? = null
 )
 
 @Dao
